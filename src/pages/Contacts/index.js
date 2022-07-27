@@ -28,7 +28,18 @@ export default function Contacts({ navigation }) {
       <View style={{ marginTop: 60 }}>
         <Text>Nome: Amanda Silva</Text>
         <Text>Telefone: (15) 55555-9999</Text>
-        <Text onPress={() => navigation.navigate('Information')}>
+        <Text
+          onPress={() =>
+            navigation.navigate('Informações', {
+              nome: 'Amanda Silva',
+              telefone: '(15) 55555-9999',
+              endereco: 'Rua das Orquideas',
+              numero: '850',
+              profissao: 'Desenvolvedora',
+              email: 'amandasilva@desen.com.br'
+            })
+          }
+        >
           Ver mais ...
         </Text>
       </View>
